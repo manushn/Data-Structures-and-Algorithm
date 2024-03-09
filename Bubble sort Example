@@ -1,0 +1,11 @@
+list = [1, 3, 2, 4, 5, 6, 9, 7]
+
+def arr(lists):
+    for i in range(len(lists), 0, -1):
+        for j in range(0, i - 1):  # Corrected the range limit
+             if lists[j] > lists[j + 1]:
+                 temp = lists[j]
+                 lists[j] = lists[j + 1]
+                 lists[j + 1] = temp
+    return lists
+print(arr(list))
